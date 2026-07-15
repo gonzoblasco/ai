@@ -1284,6 +1284,13 @@ class DefaultStreamTextResult<
             tools,
           });
 
+          // Merge warnings from start-step (e.g. provider warnings) and
+          // finish-step (e.g. reasoning-token warnings from the model):
+          const stepWarningsMerged: CallWarning[] | undefined =
+            [...(recordedWarnings ?? []), ...(part.warnings ?? [])].length > 0
+              ? [...(recordedWarnings ?? []), ...(part.warnings ?? [])]
+              : undefined;
+
           // Add step information (after response messages are updated):
           const currentStepResult: StepResult<TOOLS, RUNTIME_CONTEXT> =
             new DefaultStepResult({
@@ -1298,7 +1305,7 @@ class DefaultStreamTextResult<
               rawFinishReason: part.rawFinishReason,
               usage: part.usage,
               performance: part.performance,
-              warnings: recordedWarnings,
+              warnings: stepWarningsMerged,
               request: {
                 ...recordedRequest,
                 messages: include.requestMessages
@@ -1318,7 +1325,7 @@ class DefaultStreamTextResult<
           });
 
           logWarnings({
-            warnings: recordedWarnings,
+            warnings: stepWarningsMerged ?? [],
             provider: model.provider,
             model: model.modelId,
           });
