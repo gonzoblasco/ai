@@ -724,6 +724,12 @@ Here is the breakdown: st**r**awbe**rr**y.",
         "totalTokenCount": 294,
       },
     },
+    "warnings": [
+      {
+        "message": "The model reported 256 reasoning tokens in usage, but no reasoning content parts were returned in the stream. This can happen intermittently with Google/Vertex AI, especially with long contexts. See https://github.com/vercel/ai/issues/15704",
+        "type": "other",
+      },
+    ],
   },
 ]
 `;
@@ -820,6 +826,12 @@ exports[`doStream > reasoning-gemini3 > should stream reasoning with thoughtSign
         "totalTokenCount": 334,
       },
     },
+    "warnings": [
+      {
+        "message": "The model reported 302 reasoning tokens in usage, but no reasoning content parts were returned in the stream. This can happen intermittently with Google/Vertex AI, especially with long contexts. See https://github.com/vercel/ai/issues/15704",
+        "type": "other",
+      },
+    ],
   },
 ]
 `;
@@ -1012,6 +1024,12 @@ exports[`doStream > streaming-tool-call-arguments > should stream partial functi
         "trafficType": "ON_DEMAND",
       },
     },
+    "warnings": [
+      {
+        "message": "The model reported 132 reasoning tokens in usage, but no reasoning content parts were returned in the stream. This can happen intermittently with Google/Vertex AI, especially with long contexts. See https://github.com/vercel/ai/issues/15704",
+        "type": "other",
+      },
+    ],
   },
 ]
 `;
@@ -1366,6 +1384,12 @@ exports[`doStream > streaming-tool-call-arguments-nested > should stream nested 
         "trafficType": "ON_DEMAND",
       },
     },
+    "warnings": [
+      {
+        "message": "The model reported 1026 reasoning tokens in usage, but no reasoning content parts were returned in the stream. This can happen intermittently with Google/Vertex AI, especially with long contexts. See https://github.com/vercel/ai/issues/15704",
+        "type": "other",
+      },
+    ],
   },
 ]
 `;
@@ -1567,6 +1591,12 @@ st**r**awbe**rr**y",
         "totalTokenCount": 217,
       },
     },
+    "warnings": [
+      {
+        "message": "The model reported 185 reasoning tokens in usage, but no reasoning content parts were returned in the stream. This can happen intermittently with Google/Vertex AI, especially with long contexts. See https://github.com/vercel/ai/issues/15704",
+        "type": "other",
+      },
+    ],
   },
 ]
 `;
@@ -1670,6 +1700,12 @@ exports[`doStream > tool-call > should stream tool call 1`] = `
         "totalTokenCount": 89,
       },
     },
+    "warnings": [
+      {
+        "message": "The model reported 45 reasoning tokens in usage, but no reasoning content parts were returned in the stream. This can happen intermittently with Google/Vertex AI, especially with long contexts. See https://github.com/vercel/ai/issues/15704",
+        "type": "other",
+      },
+    ],
   },
 ]
 `;
@@ -1773,6 +1809,12 @@ exports[`doStream > tool-call-gemini3 > should stream tool call with thoughtSign
         "totalTokenCount": 848,
       },
     },
+    "warnings": [
+      {
+        "message": "The model reported 804 reasoning tokens in usage, but no reasoning content parts were returned in the stream. This can happen intermittently with Google/Vertex AI, especially with long contexts. See https://github.com/vercel/ai/issues/15704",
+        "type": "other",
+      },
+    ],
   },
 ]
 `;
